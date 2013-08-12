@@ -8,7 +8,7 @@ using DevExpress.CodeRush.Core;
 using DevExpress.CodeRush.PlugInCore;
 using DevExpress.CodeRush.StructuralParser;
 
-namespace CommentPlugIn
+namespace CodeRushContrib.AdvancedCommands
 {
     public partial class AdvancedCommandsPlugIn : StandardPlugIn
     {
@@ -38,13 +38,19 @@ namespace CommentPlugIn
             var commentedSelection = string.Empty;
 
             var lines = selection.Lines;
-   
-            foreach (var line in selection.Lines)
+
+            foreach (var line in lines)
             {
-                commentedSelection += lang.GetComment(lang.GetComment(line));
+                var lineText = line.TrimStart();
+
+                var commentLine = lang.GetComment(lang.GetComment(lineText));
+                var idx = commentLine.LastIndexOf(System.Environment.NewLine);
+                commentLine = commentLine.Remove(idx);
+                commentedSelection += commentLine;
             }
 
-            //selection.Text = commentedSelection;
+            selection.Text = commentedSelection;
+            selection.Format();
 
             if (selection.AnchorIsAtEnd)
                 selection.SwapPoints();

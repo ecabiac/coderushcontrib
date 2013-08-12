@@ -8,8 +8,8 @@
     <ProjectGuid>{925AC0ED-A92A-4D80-9D7A-2959A1F9510E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommentPlugIn</RootNamespace>
-    <AssemblyName>CommentPlugIn</AssemblyName>
+    <RootNamespace>CodeRushContrib.AdvancedCommands</RootNamespace>
+    <AssemblyName>CR_AdvancedCommands</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Users\Ethan\Documents\DevExpress\IDE Tools\Community\System</OutputPath>
+    <OutputPath>$(UserProfile)\Documents\DevExpress\IDE Tools\Community\System\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>C:\Users\Ethan\Documents\DevExpress\IDE Tools\Community\System</OutputPath>
+    <OutputPath>$(UserProfile)\Documents\DevExpress\IDE Tools\Community\System</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>

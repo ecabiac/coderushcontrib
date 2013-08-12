@@ -1,4 +1,4 @@
-namespace CommentPlugIn
+namespace CodeRushContrib.AdvancedCommands
 {
     partial class AdvancedCommandsPlugIn
     {
@@ -37,30 +37,10 @@ namespace CommentPlugIn
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.codeProvider1 = new DevExpress.CodeRush.Core.CodeProvider(this.components);
             this.doubleCommentAction = new DevExpress.CodeRush.Core.Action(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Images16x16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleCommentAction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-            // 
-            // codeProvider1
-            // 
-            this.codeProvider1.ActionHintText = "";
-            this.codeProvider1.ApplicationSphere.CodeMoving = false;
-            this.codeProvider1.ApplicationSphere.CodeSimplification = false;
-            this.codeProvider1.ApplicationSphere.MemberSignature = false;
-            this.codeProvider1.AutoActivate = true;
-            this.codeProvider1.AutoUndo = false;
-            this.codeProvider1.CodeIssueMessage = null;
-            this.codeProvider1.Description = "";
-            this.codeProvider1.Image = null;
-            this.codeProvider1.NeedsSelection = false;
-            this.codeProvider1.ParentMenu = null;
-            this.codeProvider1.ProviderName = "";
-            this.codeProvider1.Register = true;
-            this.codeProvider1.RequiresSubMenuChoice = false;
-            this.codeProvider1.SupportsAsyncMode = false;
             // 
             // doubleCommentAction
             // 
@@ -72,7 +52,6 @@ namespace CommentPlugIn
             this.doubleCommentAction.ToolbarItem.Caption = null;
             this.doubleCommentAction.ToolbarItem.Image = null;
             ((System.ComponentModel.ISupportInitialize)(this.Images16x16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleCommentAction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -80,7 +59,6 @@ namespace CommentPlugIn
 
         #endregion
 
-        private DevExpress.CodeRush.Core.CodeProvider codeProvider1;
         private DevExpress.CodeRush.Core.Action doubleCommentAction;
     }
 }
