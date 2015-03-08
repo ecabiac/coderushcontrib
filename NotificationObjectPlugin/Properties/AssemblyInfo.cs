@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using DevExpress.CodeRush.Common;
 
-[assembly: DXCoreAssembly(DXCoreAssemblyType.PlugIn, "CoderushContribEthanPlugIn", PlugInLoadType.Demand, LoadAbilityType.LoadDisabled)]
+[assembly: DXCoreAssembly(DXCoreAssemblyType.PlugIn, "NotificationObjectPlugin", PlugInLoadType.Demand, LoadAbilityType.LoadEnabled)]
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CoderushContribEthanPlugIn")]
+[assembly: AssemblyTitle("NotificationObjectPlugin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CoderushContribEthanPlugIn")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("NotificationObjectPlugin")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -23,7 +23,7 @@ using DevExpress.CodeRush.Common;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("aed1263f-73bd-4482-8b9d-3069f08e6361")]
+[assembly: Guid("e6ba5764-ce0e-4f45-ba6d-d2019528139d")]
 
 // Version information for an assembly consists of the following four values:
 //

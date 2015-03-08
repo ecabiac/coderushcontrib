@@ -7,8 +7,9 @@ using System.Windows.Forms;
 using DevExpress.CodeRush.Core;
 using DevExpress.CodeRush.PlugInCore;
 using DevExpress.CodeRush.StructuralParser;
+using DevExpress.CodeRush.StructuralParser.Xaml;
 
-namespace CodeRushContrib.AdvancedCommands
+namespace CodeRushContrib.Ethan
 {
     public partial class AdvancedCommandsPlugIn : StandardPlugIn
     {
@@ -18,6 +19,7 @@ namespace CodeRushContrib.AdvancedCommands
         {
             base.InitializePlugIn();
             doubleCommentAction.Execute += doubleCommentAction_Execute;
+
             //
             // TODO: Add your initialization code here.
             //
@@ -33,8 +35,9 @@ namespace CodeRushContrib.AdvancedCommands
 
             var selection = activeTextDocument.ActiveViewSelection;
             selection.ExtendToWholeLines();
-            
+
             var lang = CodeRush.Language;
+
             var commentedSelection = string.Empty;
 
             var lines = selection.Lines;
@@ -57,6 +60,7 @@ namespace CodeRushContrib.AdvancedCommands
             selection.Clear();
         }
         #endregion
+
         #region FinalizePlugIn
         public override void FinalizePlugIn()
         {
@@ -67,6 +71,8 @@ namespace CodeRushContrib.AdvancedCommands
             base.FinalizePlugIn();
         }
         #endregion
+
     }
+
 
 }

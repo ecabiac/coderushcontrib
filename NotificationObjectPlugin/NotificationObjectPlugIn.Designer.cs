@@ -1,13 +1,13 @@
-namespace CodeRushContrib.Ethan
+namespace CodeRushContrib.NotificationObject
 {
-    partial class AdvancedCommandsPlugIn
+    partial class NotificationObjectPlugIn
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        public AdvancedCommandsPlugIn()
+        public NotificationObjectPlugIn()
         {
             /// <summary>
             /// Required for Windows.Forms Class Composition Designer support
@@ -37,26 +37,24 @@ namespace CodeRushContrib.Ethan
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.doubleCommentAction = new DevExpress.CodeRush.Core.Action(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.doubleCommentAction)).BeginInit();
+            this.notificationObjectDerivedContextProvider = new CodeRushContrib.NotificationObject.NotificationObjectContextProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.notificationObjectDerivedContextProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
-            // doubleCommentAction
+            // notificationObjectDerivedContextProvider
             // 
-            this.doubleCommentAction.ActionName = "CRADV_SelectionDoubleComment";
-            this.doubleCommentAction.CommonMenu = DevExpress.CodeRush.Menus.VsCommonBar.None;
-            this.doubleCommentAction.Description = "Creates a comment with four slashes";
-            this.doubleCommentAction.ImageBackColor = System.Drawing.Color.Empty;
-            this.doubleCommentAction.ToolbarItem.ButtonIsPressed = false;
-            this.doubleCommentAction.ToolbarItem.Caption = null;
-            this.doubleCommentAction.ToolbarItem.Image = null;
-            ((System.ComponentModel.ISupportInitialize)(this.doubleCommentAction)).EndInit();
+            this.notificationObjectDerivedContextProvider.Description = "Current class is derived from Notification Object";
+            this.notificationObjectDerivedContextProvider.ForElement = DevExpress.CodeRush.StructuralParser.LanguageElementType.Unknown;
+            this.notificationObjectDerivedContextProvider.IsDocumentation = false;
+            this.notificationObjectDerivedContextProvider.ProviderName = "Editor\\Code\\InNotificationObjectDerived";
+            this.notificationObjectDerivedContextProvider.Register = true;
+            ((System.ComponentModel.ISupportInitialize)(this.notificationObjectDerivedContextProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
 
         #endregion
 
-        private DevExpress.CodeRush.Core.Action doubleCommentAction;
+        private CodeRushContrib.NotificationObject.NotificationObjectContextProvider notificationObjectDerivedContextProvider;
     }
 }

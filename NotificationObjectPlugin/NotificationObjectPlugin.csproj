@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8ABBC525-EAE5-49B1-AA59-EF208CE7E14C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeRushContrib.NotificationObject</RootNamespace>
+    <AssemblyName>CR_NotificationObject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Users\ec9524\Documents\DevExpress\IDE Tools\Community\PlugIns</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Users\ec9524\Documents\DevExpress\IDE Tools\Community\PlugIns</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeRush.Extensions, Version=13.2.9.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 13.2\CodeRush\System\DXCore\BIN\DevExpress.CodeRush.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="EnvDTE" />
+    <Reference Include="EnvDTE80" />
+    <Reference Include="DevExpress.CodeRush.Common" />
+    <Reference Include="DevExpress.CodeRush.Core" />
+    <Reference Include="DevExpress.CodeRush.PlugInCore" />
+    <Reference Include="DevExpress.CodeRush.StructuralParser" />
+    <Reference Include="DevExpress.DXCore.Parser" />
+    <Reference Include="DevExpress.CodeRush.VSCore" />
+    <Reference Include="DevExpress.DXCore.Controls.Utils.v6.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NotificationObjectContextProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NotificationObjectPlugIn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NotificationObjectPlugIn.Designer.cs">
+      <DependentUpon>NotificationObjectPlugIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NotificationObjectContextProvider.resx">
+      <DependentUpon>NotificationObjectContextProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationObjectPlugIn.resx">
+      <DependentUpon>NotificationObjectPlugIn.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
