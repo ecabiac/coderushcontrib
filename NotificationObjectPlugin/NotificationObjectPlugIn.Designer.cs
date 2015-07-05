@@ -38,7 +38,10 @@ namespace CodeRushContrib.NotificationObject
         {
             this.components = new System.ComponentModel.Container();
             this.notificationObjectDerivedContextProvider = new CodeRushContrib.NotificationObject.NotificationObjectContextProvider(this.components);
+            this.observableObjectContextProvider = new CodeRushContrib.NotificationObject.ObservableObjectContextProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Images16x16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notificationObjectDerivedContextProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.observableObjectContextProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // notificationObjectDerivedContextProvider
@@ -48,7 +51,17 @@ namespace CodeRushContrib.NotificationObject
             this.notificationObjectDerivedContextProvider.IsDocumentation = false;
             this.notificationObjectDerivedContextProvider.ProviderName = "Editor\\Code\\InNotificationObjectDerived";
             this.notificationObjectDerivedContextProvider.Register = true;
+            // 
+            // observableObjectContextProvider
+            // 
+            this.observableObjectContextProvider.Description = "Current class is derived from ObservableObject";
+            this.observableObjectContextProvider.ForElement = DevExpress.CodeRush.StructuralParser.LanguageElementType.Unknown;
+            this.observableObjectContextProvider.IsDocumentation = false;
+            this.observableObjectContextProvider.ProviderName = "Editor\\Code\\InObservableObjectDerived";
+            this.observableObjectContextProvider.Register = true;
+            ((System.ComponentModel.ISupportInitialize)(this.Images16x16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notificationObjectDerivedContextProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.observableObjectContextProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -56,5 +69,6 @@ namespace CodeRushContrib.NotificationObject
         #endregion
 
         private CodeRushContrib.NotificationObject.NotificationObjectContextProvider notificationObjectDerivedContextProvider;
+        private ObservableObjectContextProvider observableObjectContextProvider;
     }
 }
